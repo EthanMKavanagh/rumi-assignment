@@ -5,7 +5,8 @@ import { Grid, TextField, Button, AppBar, Toolbar, Typography } from '@material-
 import Alert from '@material-ui/lab/Alert';
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles((theme) => ({
+
+const useStyles = makeStyles({
   appbar: {
     backgroundColor: '#ffffff'
   },
@@ -19,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   paragraph: {
     color: '#606060'
   }
-}));
+});
 
 function App() {
   const classes = useStyles();
@@ -31,7 +32,7 @@ function App() {
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
   const [formStatus, setFormStatus] = useState('');
-
+  
   const handleSubmit = event => {
     event.preventDefault();
 
@@ -101,7 +102,7 @@ function App() {
                 <Grid item>
                   <TextField 
                     id="outlined-basic" 
-                    label="Name" 
+                    label="Name"
                     variant="outlined"
                     type="text"
                     value={name}
@@ -116,8 +117,6 @@ function App() {
                     label="Phone" 
                     variant="outlined"
                     type="tele"
-                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                    value={phone}
                     className={classes.input}
                     onChange={e => setPhone(e.target.value)}
                   />
