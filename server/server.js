@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const port = 3001;
+const port = 5000;
 
 const submitRouter = require('./routes/submission.route');
 
@@ -14,6 +14,7 @@ app.use( express.static('build'));
 
 /** ---------- ROUTES ---------- **/
 app.use('/submit', submitRouter);
+
 
 
 /** ---------- START SERVER ---------- **/

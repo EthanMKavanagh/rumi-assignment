@@ -1,8 +1,18 @@
-.App {
+.content {
   text-align: center;
 }
 
 h1 {
   text-align: center;
   text-decoration: underline;
+  color: #606060;
+  margin-bottom: 5px;
+}
+
+.header {
+  background-color: #ffffff;
+}
+
+.appbar-spacer {
+  flex: 1 1 auto;
 }
