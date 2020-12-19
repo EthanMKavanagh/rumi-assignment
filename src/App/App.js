@@ -55,6 +55,13 @@ function App() {
     } else {
       setFormStatus(true);
     }
+
+    setName('');
+    setPhone('');
+    setEmail('');
+    setBirthday('');
+    setSubject('');
+    setMessage('');
   }
 
   const formStatusChecker = () => {
@@ -116,7 +123,8 @@ function App() {
                     id="outlined-basic" 
                     label="Phone" 
                     variant="outlined"
-                    type="tele"
+                    type="text"
+                    value={phone}
                     className={classes.input}
                     onChange={e => setPhone(e.target.value)}
                   />
