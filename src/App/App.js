@@ -35,7 +35,6 @@ function App() {
   
   const handleSubmit = event => {
     event.preventDefault();
-
     const obj = {
       name: name,
       phone: phone,
@@ -50,18 +49,16 @@ function App() {
       payload: obj
     });
 
+    formStatusSetter();
+    resetForm();
+  }
+
+  const formStatusSetter = () => {
     if (name === '' || phone === '' || email === '' || birthday === '' || subject === '' || message === '') {
       setFormStatus(false);
     } else {
       setFormStatus(true);
     }
-
-    setName('');
-    setPhone('');
-    setEmail('');
-    setBirthday('');
-    setSubject('');
-    setMessage('');
   }
 
   const formStatusChecker = () => {
@@ -72,6 +69,15 @@ function App() {
     } else {
       return <></>
     }
+  }
+
+  const resetForm = () => {
+    setName('');
+    setPhone('');
+    setEmail('');
+    setBirthday('');
+    setSubject('');
+    setMessage('');
   }
 
   return (

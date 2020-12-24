@@ -18,8 +18,6 @@ function* rootSaga() {
 }
 
 function* submitForm(action) {
-  console.log('inside of saga');
-
   try {
     let response = yield axios({
       method: 'POST',
